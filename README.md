@@ -35,11 +35,11 @@ Advanced readability settings for ElvUI's default buff and debuff frames.
 ## System Requirements
 
 | Requirement | Details |
-| :--- | :--- |
-| **Dependency** | `ElvUI` (This is a required base add-on) |
+| :--- | :--- | 
 | **Game Client** | World of Warcraft |
 | **Expansion** | Midnight |
-| **Interface Version** | `12.0` - / `12.05` |
+| **Version** | `12.0` - `12.05` |
+| **Dependency** | `ElvUI` (This is a required base add-on) |
 
 ---
 
