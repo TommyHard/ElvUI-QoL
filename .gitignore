@@ -1,0 +1,11 @@
+.vs/
+.git/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+.idea/
+.vscode/
+
+# Logs
+*.log
