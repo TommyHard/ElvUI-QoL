@@ -1,0 +1,14 @@
+## Title: |cff1784d1ElvUI|r |cff8a2be2M|r|cff6275dbi|r|cff3c9fd6d|r|cff35b9d8n|r|cff48c4dbi|r|cff5ccfdfg|r|cff70dae2h|r|cff84e5e6t|r |cffffffffQoL|r
+## Interface: 120000, 120001, 120005
+## Notes: Various ElvUI settings fixes
+## Author: TommyHard
+## Version: 1.0.56
+## X-Compatible-With: Midnight
+## Category-enUS: User Interface
+## Category-ruRU: Интерфейс пользователя
+## Dependencies: ElvUI
+## SavedVariables:
+
+Core.lua
+Modules\Effects.lua
+Modules\Crosshair.lua
