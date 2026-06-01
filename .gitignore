@@ -6,6 +6,7 @@
 *.suo
 .idea/
 .vscode/
+Releases/
 
 # Logs
 *.log

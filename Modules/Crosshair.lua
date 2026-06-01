@@ -42,14 +42,16 @@ local lastInRange = nil
 local meleeSoundTicker = nil
 local lastMeleeSoundTime = 0
 
--- Frame's
 local crosshairFrame
 local arms, shadows = {}, {}
 local dot, dotShadow, circleRing, circleShadow
-local tickFrame = CreateFrame("Frame")
-local hpalTickFrame = CreateFrame("Frame")
 
--- Utilities
+local tickFrame = CreateFrame("Frame")
+tickFrame:Hide()
+
+local hpalTickFrame = CreateFrame("Frame")
+hpalTickFrame:Hide()
+
 local function GetSpecIndex() return GetSpecialization() or 0 end
 local function GetClassName() return select(2, UnitClass("player")) end
 
@@ -82,7 +84,6 @@ local function GetColor(r, g, b, useClass)
     return r, g, b
 end
 
--- Default Settings
 local function LoadConfig()
     if not E.db.QoL then E.db.QoL = {} end
     if not E.db.QoL.crosshair then E.db.QoL.crosshair = {} end
@@ -261,7 +262,6 @@ function Crosshair:RefreshVisibility()
     crosshairFrame:Show()
 end
 
--- Sounds
 local function StopMeleeSound()
     if meleeSoundTicker then meleeSoundTicker:Cancel(); meleeSoundTicker = nil end
 end
@@ -300,6 +300,8 @@ local function ProcessRangeState(inMelee)
 end
 
 tickFrame:SetScript("OnUpdate", function(self, elapsed)
+    if not config then return end
+
     tickAcc = tickAcc + elapsed
     if tickAcc < TICK_RATE then return end
     tickAcc = 0
@@ -318,6 +320,8 @@ tickFrame:SetScript("OnUpdate", function(self, elapsed)
 end)
 
 hpalTickFrame:SetScript("OnUpdate", function(self, elapsed)
+    if not config then return end
+
     hpalTickAcc = hpalTickAcc + elapsed
     if hpalTickAcc < TICK_RATE then return end
     hpalTickAcc = 0
@@ -426,7 +430,6 @@ function Crosshair:InsertOptions()
     }
 end
 
--- События
 local function EventHandler(self, event)
     if event == "PLAYER_LOGIN" then
         isMounted = IsMounted()

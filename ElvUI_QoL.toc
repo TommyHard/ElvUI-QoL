@@ -2,7 +2,7 @@
 ## Interface: 120000, 120001, 120005
 ## Notes: Various ElvUI settings fixes
 ## Author: TommyHard
-## Version: 1.0.56
+## Version: 1.0.72
 ## X-Compatible-With: Midnight
 ## Category-enUS: User Interface
 ## Category-ruRU: Интерфейс пользователя
@@ -12,3 +12,5 @@
 Core.lua
 Modules\Effects.lua
 Modules\Crosshair.lua
+Modules\RangeCheck.lua
+Modules\BloodlustAlert.lua
